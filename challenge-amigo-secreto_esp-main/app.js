@@ -3,10 +3,15 @@ listaAmigos = new Set();
 
 
 function agregarAmigo(){
+  if(!amigo.value){
+    alert('ingresa un nombre por favor');
+  } else{
     listaAmigos.add(document.getElementById('amigo').value);
     limpiar();
+  }   
 
 }
+
 function limpiar(){
     document.querySelector('#amigo').value = '';
 }
@@ -19,5 +24,6 @@ function sortearAmigo() {
   alert("el amigo elegido es "+ amigoElegido);
   return amigoElegido;
 }
+
 
 
